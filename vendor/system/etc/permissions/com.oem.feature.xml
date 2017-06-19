@@ -1,0 +1,16 @@
+<permissions>
+    <feature name="oem.prox.calibration.support" />
+    <feature name="oem.button.light.support" />
+    <feature name="oem.button.define.not.support" />
+    <feature name="oem.otgSwitch.support" />
+    <feature name="oem.audiotuner.common" />
+    <feature name="oem.threeScreenshot.support" />
+    <feature name="oem.5gwifi.support" />
+    <feature name="oem.usb.microb.support" />
+    <feature name="oem.no_aging.support" />
+    <feature name="oem.ambient.support" />
+    <feature name="oem.direct.support" />
+    <feature name="oem.op_eyecare_zero.support" />
+    <feature name="oem.virtual.hw.key" />
+    <feature name="oem.button.inverted.hw.key.order" />
+</permissions>
