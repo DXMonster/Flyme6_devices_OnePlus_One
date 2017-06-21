@@ -79,7 +79,12 @@ ro.product.locale.language= zh
 ro.wifi.channels=
 ro.board.platform=msm8974
 # ro.build.product is obsolete; use ro.product.device
+ro.build.product=A0001
+ro.product.model=OnePlus A0001
+ro.product.device=A0001
 # Do not try to parse description, fingerprint, or thumbprint
+ro.build.description=OnePlus One-user 6.0.1 MMB29M 1234567890 test-keys
+ro.build.fingerprint=OnePlus/A0001/A0001:6.0.1/MMB29M/1234567890:user/test-keys
 ro.build.characteristics=nosdcard
 ro.product.locale=zh-CN
 # end build properties
