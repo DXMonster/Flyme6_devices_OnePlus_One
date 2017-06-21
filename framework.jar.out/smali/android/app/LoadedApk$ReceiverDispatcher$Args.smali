@@ -182,6 +182,14 @@
     .line 903
     invoke-virtual {v5, p0}, Landroid/content/BroadcastReceiver;->setPendingResult(Landroid/content/BroadcastReceiver$PendingResult;)V
 
+    iget-object v8, p0, Landroid/app/LoadedApk$ReceiverDispatcher$Args;->this$0:Landroid/app/LoadedApk$ReceiverDispatcher;
+
+    invoke-static {v2, v8}, Landroid/app/LoadedApk$FlymeInjector;->isFlymeRejectReceive(Landroid/content/Intent;Landroid/app/LoadedApk$ReceiverDispatcher;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_flyme_0
+
     .line 904
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -252,6 +260,9 @@
     move-result-object v9
 
     invoke-static {v8, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    :cond_flyme_0
+
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

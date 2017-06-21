@@ -6,6 +6,8 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/android/server/notification/NotificationManagerService$FlymeExtNotificationManagerServiceInternal;,
+        Lcom/android/server/notification/NotificationManagerService$FlymeWakeUpScreenRunnable;,
         Lcom/android/server/notification/NotificationManagerService$PolicyAccess;,
         Lcom/android/server/notification/NotificationManagerService$StatusBarNotificationHolder;,
         Lcom/android/server/notification/NotificationManagerService$DumpFilter;,
@@ -2304,6 +2306,8 @@
 
     .line 2697
     invoke-virtual/range {p0 .. p0}, Lcom/android/server/notification/NotificationManagerService;->updateLightsLocked()V
+
+    invoke-direct/range {p0 .. p1}, Lcom/android/server/notification/NotificationManagerService;->notifyFlymeWakeupScreen(Lcom/android/server/notification/NotificationRecord;)V
 
     .line 2698
     move-object/from16 v0, p0
@@ -10740,6 +10744,8 @@
     iput v11, v0, Lcom/android/server/notification/NotificationManagerService;->mWarningLevel:I
 
     :cond_2
+    invoke-direct/range {p0 .. p0}, Lcom/android/server/notification/NotificationManagerService;->initFlymeExtraFields()V
+
     return-void
 
     .end local v4    # "pkgFilter":Landroid/content/IntentFilter;

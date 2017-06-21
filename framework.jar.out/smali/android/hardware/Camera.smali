@@ -1006,6 +1006,18 @@
     .locals 5
 
     .prologue
+    invoke-static {}, Landroid/hardware/Camera;->isFlymePermissionGranted()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_flyme_0
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_flyme_0
+
     const/4 v3, 0x0
 
     .line 402
@@ -1079,6 +1091,18 @@
     .param p0, "cameraId"    # I
 
     .prologue
+    invoke-static {}, Landroid/hardware/Camera;->isFlymePermissionGranted()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_flyme_0
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_flyme_0
+
     invoke-static {}, Landroid/util/OpFeatures;->isSupportedCTAPermissionControl()Z
 
     move-result v0
